@@ -1,0 +1,27 @@
+:root { 
+    --primary:
+    --secundary:
+
+    --fuentePrincipal:
+    --fuenteSecundaria:
+    
+}
+
+html { 
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+}
+
+*, *::after, *::before { 
+    box-sizing: inherit;
+}
+
+body { 
+
+}
+
+
+font-family: 'Flow Circular', cursive;
+font-family: 'Lato', sans-serif;
+font-family: 'Roboto', sans-serif;
+font-family: 'Saira', sans-serif;
