@@ -1,6 +1,6 @@
 :root {
 	--primary: #ffe01b;
-    --secundary:;
+	/* --secundary:; */
 	--colorBtn1: #ffe01b;
 	--colorBtn2: rgba(255, 225, 27, 0.475);
 	--negro: rgb(0, 0, 0);
@@ -10,7 +10,7 @@
 	--fuenteSecundaria: "Saira", sans-serif;
 	--fuenteTerciaria: "Roboto", sans-serif;
 
-    --scaleBtn: scale(1.3);
+	--scaleBtn: scale(1.3);
 }
 
 html {
@@ -27,7 +27,7 @@ html {
 
 h1,
 h2,
-h2 {
+h3 {
 	font-family: var(--fuenteSecundaria);
 }
 
@@ -48,13 +48,13 @@ img {
 
 /*--Pagina-bienvenidos-- */
 
-.bg-color {
+.bg-color-index {
 	background-image: linear-gradient(to right, rgba(21, 21, 21, 0.552) 0%, rgba(0, 0, 0, 0.603) 100%), url(../imgs/photo-hero1.avif);
 	background-repeat: no-repeat;
-    height: 100vh;
+	height: 100vh;
 }
 @media (min-width: 768px) {
-	.bg-color {
+	.bg-color-index {
 		height: 100vh;
 		background-size: cover;
 		background-image: linear-gradient(to right, rgba(21, 21, 21, 0.758) 0%, rgba(0, 0, 0, 0.785) 100%), url(../imgs/photo-hero1.avif);
@@ -95,7 +95,7 @@ img {
 	text-align: center;
 	border-radius: 3rem;
 	padding: 2rem 0;
-    transition: background, color, 0.3s ease;
+	transition: background, color, 0.3s ease;
 }
 @media (min-width: 768px) {
 	.container-contenido-bvn {
@@ -116,6 +116,7 @@ img {
 
 .container-contenido-bvn p {
 	font-size: 2rem;
+	margin: 3rem 0;
 }
 @media (min-width: 980px) {
 	.container-contenido-bvn p {
@@ -123,8 +124,8 @@ img {
 	}
 }
 
-.container-contenido-bvn span { 
-    color: var(--colorBtn1);
+.container-contenido-bvn span {
+	color: var(--colorBtn1);
 }
 
 .container-botones-bvn {
@@ -177,11 +178,129 @@ img {
 	border: 0.1rem solid var(--negro);
 	font-weight: bold;
 	border-radius: 2rem;
-    text-decoration: underline;
+	text-decoration: underline;
 }
 @media (min-width: 768px) {
-    .container-botones-bvn a:hover {
-        transform: var(--scaleBtn);
-    }
+	.container-botones-bvn a:hover {
+		transform: var(--scaleBtn);
+	}
 }
+
+/* --NavBar-- */
+.fondo-navbar {
+	backdrop-filter: blur(3rem);
+	margin-bottom: 70rem;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 1;
+}
+.icon-nav {
+	font-family: var(--fuenteSecundaria);
+	font-size: x-large;
+	font-weight: 700;
+	font-size: 1.8rem;
+}
+@media (min-width: 768px) {
+	.icon-nav {
+		font-size: 2.5rem;
+	}
+}
+
+.nav-link {
+	font-family: var(--fuentePrincipal);
+	font-size: larger;
+	/* color: aliceblue; */
+}
+
+/* --Pagina Portafolio--  */
+
+.bg-color-portafolio {
+	background: linear-gradient(to right, #10ffdb00 0%, rgba(0, 0, 0, 0) 100%), #023555;
+}
+
+.hero-portafolio {
+	background: linear-gradient(to left, rgba(0, 0, 0, 0.502) 0%, rgba(0, 0, 0, 0.5) 100%), url(../imgs/hero.portafolio.jpg);
+	height: 100vh;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: bottom;
+}
+
+.section-sobremi {
+	color: white;
+	margin: 0 auto;
+	max-width: 120rem;
+	padding: 0 1rem;
+}
+
+.section-sobremi h2 {
+	text-decoration: underline;
+	font-size: 2.5rem;
+	margin: 3rem 0;
+}
+@media (min-width: 768px) {
+	.section-sobremi h2 {
+		text-decoration: underline;
+		font-size: 5rem;
+	}
+}
+
+.section-stacks {
+	color: white;
+	margin: 0 auto;
+	max-width: 120rem;
+}
+
+.section-stacks h2 {
+	text-decoration: underline;
+	font-size: 2.5rem;
+	margin: 3rem 0;
+}
+@media (min-width: 768px) {
+	.section-stacks h2 {
+		text-decoration: underline;
+		font-size: 5rem;
+	}
+}
+
+.contenedor-stacks {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 2rem;
+}
+@media (min-width: 1200px) {
+	.contenedor-stacks {
+		gap: 3rem;
+		max-width: 140rem;
+		padding: 8rem;
+		justify-content: space-evenly;
+	}
+}
+
+.contenedor-stacks a {
+	text-decoration: none;
+	color: white;
+	transition: color, .3s ease;
+}
+
+.contenedor-stacks a:hover{
+	transform: scale(1.09);
+	font-size: 1.8rem;
+	color: var(--colorBtn1);
+	font-weight: bold;
+}
+
+.contenedor-stacks img {
+	width: 10rem;
+	margin: 0 auto;
+}
+@media (min-width: 980px) {
+	.contenedor-stacks img {
+		width: 15rem;
+	}
+}
+
 /* --Pagina Curriculum-- */
