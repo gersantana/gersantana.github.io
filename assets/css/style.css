@@ -285,12 +285,18 @@ img {
 .section-stacks h2 {
 	text-decoration: underline;
 	font-size: 3rem;
+	margin: 0;
 }
 @media (min-width: 768px) {
 	.section-stacks h2 {
 		text-decoration: underline;
 		font-size: 5rem;
 	}
+}
+
+.section-stacks p {
+	margin: 0;
+	padding: 3rem 0;
 }
 
 .contenedor-stacks {
@@ -310,7 +316,12 @@ img {
 	text-decoration: none;
 	color: var(--gris);
 	transition: color, 0.3s ease;
-	height: 20rem;
+	height: 12rem;
+}
+@media (min-width: 768px) {
+	.contenedor-stacks a {
+	 height: 20rem;
+}
 }
 
 .contenedor-stacks a:hover {
@@ -335,10 +346,24 @@ img {
 	color: var(--colorTextoOscuro);
 	padding: 8rem 1rem;
 }
+@media (min-width: 768px) {
+	.container-proyectos {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		row-gap: 5rem;
+		justify-items: center;
+	}
+}
+@media (min-width: 1024px) {
+	.container-proyectos{
+		grid-template-columns: repeat(3, 1fr);
+	}
+}
 
 .section-proyectos h2 {
 	text-decoration: underline;
 	font-size: 3rem;
+	margin: 0 0 6rem 0;
 }
 @media (min-width: 768px) {
 	.section-proyectos h2 {
@@ -354,6 +379,23 @@ img {
 	box-shadow: -.3rem .3rem 1rem #3333337a;
 	border-radius: .5rem;
 }
+@media (min-width: 500px) {
+	.card-proyecto {
+		max-width: 35rem;
+		margin: 2rem auto 0 auto;
+	}
+}
+@media (min-width: 1024px) {
+	.card-proyecto {
+		max-width: 30rem;
+		margin: 0;	
+	}
+}
+@media (min-width: 1200px) {
+	.card-proyecto {
+		max-width: 35rem;
+	}
+}
 
 .card-proyecto h3 { 
 	padding: 2rem;
@@ -367,6 +409,79 @@ img {
 
 .card-proyecto .img-proyecto {
 	/* padding-top: 8rem; */
+}
+
+.trabajando { 
+	background-color: var(--blanco);
+	border-radius: 0.5rem;
+	box-shadow: -.3rem .3rem 1rem #3333337a;
+	padding: 3rem 1rem;
+	margin: 6rem; 
+	margin: 2rem auto 0 auto;
+	max-width: 35rem;
+}
+
+@media (min-width: 768px) {
+	.trabajando { 
+		grid-column-start: 1;
+		grid-column-end: 3;
+		margin: 0 3rem;
+		background-color: var(--blanco);
+		max-width: 72rem;
+	}
+}
+@media (min-width: 1024px) {
+	.trabajando { 
+		grid-column-start: 2;
+		grid-column-end: 4;
+	}
+}
+
+.trabajando .tittle-trabajando{
+	font-size: 3rem;
+	color: var(--colorTextoOscuro);
+	text-decoration: underline var(--azulClaro);
+}
+@media (min-width: 768px) {
+	.trabajando .tittle-trabajando{
+		font-size: 4rem;
+		height: ;
+	}
+}
+.trabajando p { 
+	padding: 2rem ;
+	margin: 0;
+	font-size: 2rem;
+}
+@media (min-width: 768px) {
+	.trabajando p { 
+		padding: 3rem 5rem 5rem 5rem;
+		margin: 0;
+		font-size: 2.5rem;
+	}
+}
+
+.trabajando span {
+	color: var(--azulClaro);
+}
+
+.trabajando .mi-github{ 
+	display: flex;
+	justify-content: center;
+}
+
+.trabajando a { 
+	text-decoration: none;
+		color: var(--colorTextoOscuro);
+		transition: color, background, .5s ease;
+		color: var(--azulClaro);
+}
+
+.trabajando a:hover {
+	text-decoration: underline;
+	color: var(--azulClaro);
+	scale: 1.08;
+	font-weight: bold;
 }
 
 .icons-proyectos { 
@@ -404,6 +519,21 @@ img {
 	box-shadow: none;
 	color: var(--colorTextoClaro);
  }
+
+ /* --Section Contribuciones-- */
+ .section-contribucio {
+	color: var(--colorTextoOscuro);
+ }
+.section-contribucio h2 {
+	text-decoration: underline;
+	font-size: 3rem;
+}
+@media (min-width: 768px) {
+	.section-contribucio h2{
+		font-size: 5rem;
+	}
+}
+
 /* --Section contactame-- */
 .section-contactame {
 	color: var(--blanco);
@@ -457,7 +587,7 @@ img {
 .links-contactame a:hover {
 	transform: scale(1.09);
 	color: var(--colorBtn1);
-	/* font-weight: bold; */
+	font-weight: bold;
 }
 
 .links-contactame img {
@@ -474,4 +604,5 @@ img {
 	color: var(--blanco);
 	background-color: #555555;
 }
+
 /* --Pagina Curriculum-- */
