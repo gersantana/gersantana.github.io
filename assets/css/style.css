@@ -1,10 +1,19 @@
 :root {
 	--primary: #ffe01b;
 	/* --secundary:; */
-	--colorBtn1: #ffe01b;
-	--colorBtn2: rgba(255, 225, 27, 0.475);
+	--colorBtn1: #007bff;
+	--colorBtn2: #007bff;
+	--colorAmarilloOscuro: rgba(255, 225, 27, 0.475);
 	--negro: rgb(0, 0, 0);
 	--blanco: rgb(255, 255, 255);
+	--azulOscuro: #002e5d;
+	--azulClaro: #007bff;
+	--gris: #cccccc;
+	--azulPrueba: #023555;
+	--colorTextoOscuro: #333333;
+	--colorTextoClaro: #ffffff;
+	--morado: #221d30;
+	--fondoGeneralPortafolio: #cccccc;
 
 	--fuentePrincipal: "Lato", sans-serif;
 	--fuenteSecundaria: "Saira", sans-serif;
@@ -40,6 +49,16 @@ body {
 img {
 	max-width: 100%;
 	display: block;
+}
+
+.container-120 {
+	max-width: 120rem;
+	margin: 0 auto;
+}
+
+.container-140 {
+	max-width: 140rem;
+	margin: 0 auto;
 }
 
 .text-center {
@@ -186,9 +205,12 @@ img {
 	}
 }
 
+/* -- PAGINA PORTAFOLIO.HTML-- */
+
 /* --NavBar-- */
 .fondo-navbar {
-	backdrop-filter: blur(3rem);
+	background-color: #002f5db6;
+	backdrop-filter: blur(7rem);
 	margin-bottom: 70rem;
 	position: fixed;
 	top: 0;
@@ -210,13 +232,20 @@ img {
 .nav-link {
 	font-family: var(--fuentePrincipal);
 	font-size: larger;
-	/* color: aliceblue; */
+	transition: color, background, 0.3s ease;
+	color: var(--blanco);
 }
 
-/* --Pagina Portafolio--  */
+.nav-link:hover {
+	color: var(--colorBtn1);
+	font-weight: bold;
+	text-decoration: underline;
+}
+/* --FIN NAVBAR-- */
 
+/* --HEADER Portafolio--  */
 .bg-color-portafolio {
-	background: linear-gradient(to right, #10ffdb00 0%, rgba(0, 0, 0, 0) 100%), #023555;
+	background: linear-gradient(to right, #10ffdb00 0%, rgba(0, 0, 0, 0) 100%), var(--fondoGeneralPortafolio);
 }
 
 .hero-portafolio {
@@ -228,17 +257,16 @@ img {
 	background-position: bottom;
 }
 
+/* --Section sobremi-- */
 .section-sobremi {
-	color: white;
-	margin: 0 auto;
-	max-width: 120rem;
-	padding: 0 1rem;
+	color: var(--colorTextoOscuro);
+	padding: 8rem 1rem;
 }
 
 .section-sobremi h2 {
 	text-decoration: underline;
-	font-size: 2.5rem;
-	margin: 3rem 0;
+	font-size: 3rem;
+	padding-bottom: 3rem;
 }
 @media (min-width: 768px) {
 	.section-sobremi h2 {
@@ -247,16 +275,16 @@ img {
 	}
 }
 
+/* --Section-Stacks-- */
 .section-stacks {
-	color: white;
-	margin: 0 auto;
-	max-width: 120rem;
+	color: var(--colorTextoClaro);
+	background-color: var(--azulOscuro);
+	padding: 8rem 1rem;
 }
 
 .section-stacks h2 {
 	text-decoration: underline;
-	font-size: 2.5rem;
-	margin: 3rem 0;
+	font-size: 3rem;
 }
 @media (min-width: 768px) {
 	.section-stacks h2 {
@@ -273,20 +301,19 @@ img {
 }
 @media (min-width: 1200px) {
 	.contenedor-stacks {
-		gap: 3rem;
-		max-width: 140rem;
-		padding: 8rem;
-		justify-content: space-evenly;
+		gap: 7rem;
+		justify-content: center;
 	}
 }
 
 .contenedor-stacks a {
 	text-decoration: none;
-	color: white;
-	transition: color, .3s ease;
+	color: var(--gris);
+	transition: color, 0.3s ease;
+	height: 20rem;
 }
 
-.contenedor-stacks a:hover{
+.contenedor-stacks a:hover {
 	transform: scale(1.09);
 	font-size: 1.8rem;
 	color: var(--colorBtn1);
@@ -303,4 +330,148 @@ img {
 	}
 }
 
+/* --Section proyectos-- */
+.section-proyectos {
+	color: var(--colorTextoOscuro);
+	padding: 8rem 1rem;
+}
+
+.section-proyectos h2 {
+	text-decoration: underline;
+	font-size: 3rem;
+}
+@media (min-width: 768px) {
+	.section-proyectos h2 {
+		text-decoration: underline;
+		font-size: 5rem;
+	}
+}
+
+.card-proyecto { 
+	background-color: white;
+	margin: 3rem 0 0 0;
+	padding: 1rem 0 3rem 0;
+	box-shadow: -.3rem .3rem 1rem #3333337a;
+	border-radius: .5rem;
+}
+
+.card-proyecto h3 { 
+	padding: 2rem;
+	margin: 0;
+}
+
+.card-proyecto .decripcion-proyecto {
+	margin: 0;
+	padding: 0 1rem;
+}
+
+.card-proyecto .img-proyecto {
+	/* padding-top: 8rem; */
+}
+
+.icons-proyectos { 
+	display: flex;
+	justify-content: center;
+	padding:2rem;
+}
+
+.icons-proyectos img { 
+	width: 4rem;
+}
+
+.btns-proyectos {
+	display: flex;
+	gap: 5rem;
+	justify-content: center;
+}
+.btns-proyectos a{
+	text-decoration: none;
+	color: var(--colorTextoClaro);
+	background-color: #007bff;
+	padding: 1rem 2rem;
+	border-radius: 1rem;
+	transition: color, background, 0.5s ease;
+	font-weight: bold;
+	box-shadow: -.3rem .3rem 1rem #3333337a;
+	transform: scale(1.19);
+	font-size: 1rem
+ }
+
+ .btns-proyectos a:hover {
+	background-color: #002e5d;
+	transform: none;
+	border-radius: 2rem;
+	box-shadow: none;
+	color: var(--colorTextoClaro);
+ }
+/* --Section contactame-- */
+.section-contactame {
+	color: var(--blanco);
+	padding: 8rem 1rem;
+	background-color: var(--azulOscuro);
+	/* max-width: 120rem; */
+	margin: 0 auto;
+}
+
+.section-contactame h2 {
+	text-decoration: underline;
+	font-size: 3rem;
+}
+@media (min-width: 768px) {
+	.section-contactame h2 {
+		text-decoration: underline;
+		font-size: 5rem;
+	}
+}
+
+.section-contactame p {
+	margin-top: 3rem;
+}
+
+.links-contactame {
+	display: flex;
+	gap: 2rem;
+	justify-content: center;
+	align-content: center;
+	flex-wrap: wrap;
+	margin-top: 3rem;
+}
+@media (min-width: 768px) {
+	.links-contactame {
+		gap: 5rem;
+	}
+}
+
+.links-contactame a {
+	text-decoration: none;
+	color: var(--blanco);
+	transition: color, 0.3s ease;
+	font-size: small;
+}
+@media (min-width: 768px) {
+	.links-contactame a {
+		height: 8rem;
+	}
+}
+
+.links-contactame a:hover {
+	transform: scale(1.09);
+	color: var(--colorBtn1);
+	/* font-weight: bold; */
+}
+
+.links-contactame img {
+	width: 5rem;
+	margin: 0 auto;
+}
+@media (min-width: 728px) {
+	.links-contactame img {
+		width: 6rem;
+	}
+}
+
+.section-footer {
+	color: var(--blanco);
+	background-color: #555555;
+}
 /* --Pagina Curriculum-- */
