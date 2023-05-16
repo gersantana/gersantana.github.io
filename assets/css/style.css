@@ -407,10 +407,6 @@ img {
 	padding: 0 1rem;
 }
 
-.card-proyecto .img-proyecto {
-	/* padding-top: 8rem; */
-}
-
 .trabajando { 
 	background-color: var(--blanco);
 	border-radius: 0.5rem;
@@ -445,7 +441,6 @@ img {
 @media (min-width: 768px) {
 	.trabajando .tittle-trabajando{
 		font-size: 4rem;
-		height: ;
 	}
 }
 .trabajando p { 
