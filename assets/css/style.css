@@ -602,4 +602,51 @@ img {
 }
 
 /* --Pagina Curriculum-- */
+.bg-main {
+	background-color: var(--blanco);
+}
+
+.container-main {
+	padding: 5rem 1rem;
+}
+
+.datos-personales h2 {
+	font-size: 4rem;
+	text-decoration: var(--azulOscuro) underline;
+	margin:4rem 0 2rem 0;
+}
+
+.icon-flex {
+	display: flex;
+	gap: 1rem;
+	align-items: center;
+	padding-top: 2rem;
+}
+
+.icon-flex p { 
+	margin: 0;
+}
+
+.resumen h2 {
+	font-size: 4rem;
+	text-decoration: underline;
+	margin:4rem 0;
+}
+
+.formacion h2 { 
+	font-size: 4rem;
+	text-decoration: underline;
+	margin:4rem 0;
+}
+
+.formacion span { 
+	text-decoration: underline var(--azulOscuro);
+	font-weight: 600;
+}
+
+.habilidades h2 {
+	font-size: 4rem;
+	text-decoration: underline;
+	margin:4rem 0;
+}
 
