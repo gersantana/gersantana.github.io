@@ -162,11 +162,13 @@ img {
 	border: 0.1rem solid rgba(0, 0, 0, 0);
 	font-weight: bold;
 	transition: color, background, 0.3s ease;
+	font-size: 1.3rem;
 }
 @media (min-width: 980px) {
 	.container-botones-bvn a {
 		display: inline-block;
 		font-weight: normal;
+		font-size: 1.6rem;
 	}
 
 	.btn-cv {
@@ -600,3 +602,4 @@ img {
 }
 
 /* --Pagina Curriculum-- */
+
